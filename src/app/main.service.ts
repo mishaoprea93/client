@@ -8,7 +8,7 @@ export class MainService {
 
   login(user,cb){
     this._http.post('/login',user).subscribe((res)=>{
-      console.log('heyyyy',res.json());
+      cb(res.json());
     })
   }
 }
